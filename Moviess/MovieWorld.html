@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MoviesWorld</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="logo.jpg" type="jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <style>
+        body {
+            background: #1d1d1d;
+            color: #444;
+            font-family: Raleway, Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        img {
+            width: 182px;
+            height: 260px;
+            cursor: pointer;
+        }
+        
+        img:hover {
+            box-shadow: gainsboro 0px 0px 16px;
+            transition: 0.5s ease;
+        }
+        
+        .content {
+            margin-top: 2%;
+            margin-left: 3%;
+        }
+        
+        h3 {
+            color: aliceblue;
+            font-size: 18px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        }
+        
+        h4 {
+            color: aliceblue;
+            font-size: 16px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        }
+        
+        nav {
+            background: #252525;
+        }
+        
+        #mov {
+            cursor: pointer;
+            size: 15px;
+            color: limegreen;
+            font-weight: 500;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        #sl {
+            color: aliceblue;
+            font-size: 40px;
+            font-weight: 400;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #foot{
+            position: fixed;
+            width:100%;
+            top:92%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse  justify-content-between">
+        <a class="navbar-brand" id="tit" href="MovieWorld.html">
+            <h2 id="mov">MoviesWorld</h2>
+        </a>
+        <form class="form-inline">
+            <input type="search" class="form-control mr-sm-2" placeholder="Search" aria-label="Search" id="search-bar" onkeyup="search()">
+             <a href="Watch.html">
+                <button class="btn btn-outline-success my-2 my-sm-0" id="s-button" onclick="search()"><a href="Watch.html" style="text-decoration: none;color: inherit;"target="_blank">Search</a></button>
+            </a>
+        </form>
+    </nav>
+    <br>
+    <h1 style="text-align:center;font-family: cursive;color:honeydew" id="sl">Feel the World of Movies</h1><br>
+    <h3 style="text-align:center;color:beige;font-family:Georgia, 'Times New Roman', Times, serif;">Watch Telugu movies in excellent quality.<br> Exclusively designed & developed for smartphones, tablets and PCs.</h3>
+    <br><br>
+    -->
+    <div class="content" id="movies">
+        <div class="container-fluid">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm movie">
+                        <article>
+                            <a href="Watch.html" onclick="return getDetails('Pushpa The Rise','2021','Action/Adventure/Crime','Sukumar','Allu Arjun','Rashmika','Fahadh faasil','jpg')" target="_blank">
+                                <img src="Pushpa The Rise.jpg">
+                            </a>
+                            <h3 class="movie_name">Pushpa The Rise</h3>
+                            <h4>2021</h4>
+                        </article>
+                    </div>
+                    <div class="col-sm movie">
+                        <article>
+                            <a href="Watch.html" onclick= "return getDetails('KGF Chapter 2','2022','Action/Crime/Drama','Prashanth neel','Yash','Srinidhi Shetty','Sanjay Dutt','jpg')" target="_blank">
+                                <img src="KGF Chapter 2.jpg">
+                            </a>
+                            <h3 class="movie_name">KGF Chapter 2</h3>
+                            <h4>2022</h4>
+                        </article>
+                    </div>
+                    <div class="col-sm movie">
+                        <article>
+                            <a href="Watch.html" target="_blank" onclick= "return getDetails('RRR','2022','Action/Drama','S.S. Rajamouli','J.N.R Ntr , Ram Charan','Alia Bhatt','Ajay Devgn','jpeg')">
+                                <img src="rrr.jpeg">
+                            </a>
+                            <h3 class="movie_name">RRR</h3>
+                            <h4>2022</h4>
+                        </article>
+                    </div>
+                    <div class="col-sm movie">
+                        <article>
+                            <a href="#" onclick="return getname('Jana Gana Mana')" >
+                                <img src="jgm.jpg">
+                            </a>
+                            <h3 class="movie_name">Jana Gana Mana</h3>
+                            <h4>2022</h4>
+                        </article>
+                    </div>
+                    <div class="col-sm movie">
+                        <article>
+                            <a href="#" onclick="return getname('Acharya')" >
+                                <img src="acharya.jpg">
+                            </a>
+                            <h3 class="movie_name">Acharya</h3>
+                            <h4>2022</h4>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <br>
+    <hr>
+  <footer>
+    <footer class="bg-dark text-center text-white" id="foot">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright:
+            <a class="text-white" style="cursor: pointer;" href="MovieWorld.html">MoviesWorld.com</a>
+        </div>
+    </footer>
+    <script src="app.js "></script>
+    </footer>
+</body>
+
+</html>

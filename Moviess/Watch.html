@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Moviess</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="logo.jpg" type="jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+        *{
+            max-width:100%;
+        }
+        body {
+            background: #1d1d1d;
+            color: #444;
+            font-family: Raleway, Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        img {
+            width: 185px;
+            height: 270px;
+            cursor: pointer;
+        }
+        
+        img:hover {
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        
+        .content {
+            margin-top: 2%;
+            margin-left: 12.4%;
+        }
+        
+        h3 {
+            color: aliceblue;
+            font-size: 18px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        }
+        
+        h4 {
+            color: aliceblue;
+            font-size: 16px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        }
+        
+        nav {
+            background: #252525;
+        }
+        
+        #mov {
+            cursor: pointer;
+            size: 15px;
+            color: limegreen;
+            font-weight: 500;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        #sl {
+            color: aliceblue;
+            font-size: 40px;
+            font-weight: 400;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .details h1,h2{
+            color: whitesmoke;
+            font-family: cursive;
+        }
+        #foot{
+            width:100%;
+            top:100%;
+        }
+        #nav{
+            width:100%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse  justify-content-between" id="nav">
+        <a class="navbar-brand" id="tit" href="ibomma.html">
+            <h2 id="mov">Moviess</h2>
+        </a>
+        <form class="form-inline">
+            <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-bar">
+            <a href="Watch.html">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </a> -->
+        </form>
+    </nav>
+    <br>
+    <div class="container-fluid">
+        <div class="container-fluid content">
+            <div class="row">
+                <div class="col-sm-20%" style="margin-left:2%;">
+                    <img src="" id="m_img" class="img-responsive">
+                </div>
+                <div class="col-sm-8 details" style="margin-left: 1%;">
+                    <br>
+                    <h1 id="name"></h1>
+                    <!-- <br> -->
+                    <h4 id="year" style="margin-right: 1%">Year</h4>
+                    <h3 id="type" style="margin-right: 1%;">Type</h3>
+                    <br><br>
+                    <h3 id="cast"><i class="fa fa-user" style="margin-right:1% ;color: white;"></i>Cast : </h3>
+                    <h3 id="director"><i class="fa fa-user" style="margin-right:1% ;"></i>Director : </h3>
+                    
+                </div>
+            </div>
+        </div>
+     </div>
+    <br>
+    <video id="vdio" src="" style="margin-left:15%" height="120%" width="70%"  controls poster="">
+    Your browser does not support HTML video.
+  </video>
+  <br>
+  <footer class="bg-dark text-center text-white" id="foot">
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright:
+        <a class="text-white" style="cursor: pointer;" href="Movies.html">Moviess.com</a>
+    </div>
+</footer>
+</body>
+<script>
+    document.getElementById("name").innerText = localStorage.getItem("movie_name");
+    var name=localStorage.getItem("movie_name");
+    document.getElementById("name").style.color = "white";
+    document.getElementById("name").style.fontFamily = "cursive";
+    document.getElementById("year").innerText=localStorage.getItem("year");
+    document.getElementById("type").innerText=localStorage.getItem("type");
+    document.getElementById("cast").innerHTML+=localStorage.getItem("cast");
+    document.getElementById("director").innerHTML+=localStorage.getItem("director");
+    function changeSource(url) {
+        var video = document.getElementById('vdio');
+        var img=document.getElementById('m_img');
+
+        video.src = url;
+        img.src=localStorage.getItem("movie_name")+"."+localStorage.getItem("imgtype");
+    }
+    var s = localStorage.getItem("movie_name") + ".mp4";
+    changeSource(s);
+</script>
+
+</html>
