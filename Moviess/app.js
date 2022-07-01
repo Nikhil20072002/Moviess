@@ -16,16 +16,6 @@ const search = () => {
         }
     }
 }
-// const getname = (n) => {
-//     const movie = document.querySelectorAll(".movie");
-//     for (var i = 0; i <= movie.length; i++) {
-//         let match = movie[i].querySelector(".movie_name").textContent
-//         if (match == n) {
-//             localStorage.setItem("movie_name", match);
-//             break;
-//         }
-//     }
-// }
 const getDetails=(name,year,type,director,hero,heroine,villain,imgtype)=>{
             localStorage.setItem("movie_name", name);
             localStorage.setItem("year",year);
